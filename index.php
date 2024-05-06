@@ -37,17 +37,34 @@
         background-position: 50% 100%;
       }
     }
-    
+    .container{
+      background-color: lightblue;
+      width: 80%;
+      height: 90vh;
+      margin:auto;
+      display:flex;
+      justify-content: space-around;
+      flex-wrap:wrap;
+
+    }
+    .date{
+      border: 5px double black;
+      width: 12%;
+      height: 8%;
+    }
   </style>
 </head>
 <body>
 <h1>萬年曆</h1>  
 <div class="bgc_gradient">
-<?php
-/*請在這裹撰寫你的萬年曆程式碼*/  
-  
-  
-?>
+  <div class="container">
+  <?php for ($i=1; $i <=48 ; $i++) : ?>
+    <!-- /*請在這裹撰寫你的萬年曆程式碼*/   -->
+    <!-- if($i) -->
+    
+    <div class="date"><?=$i;?></div>
+    
+    <?php endfor; ?>
   </div>
-</body>
+  </body>
 </html>
