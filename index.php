@@ -17,34 +17,53 @@
   <?php
   $w = 5; // 每次增加的 '0' 數量
   $day = 30;
-
   $mon = []; // 建立一個空陣列
-
-  $count = 1; // 起始數字
-
   for ($i = 1; $i <= 42; $i++) {
     if ($i <= $w) {
       $mon[] = 'QAQ';
     } elseif (($i - $w) <= $day) {
       $mon[] = ($i - $w);
     } else {
-      $mon[] = 'QAQ';
+      $mon[] = 'OAO';
     }
   }
 
   // 印出陣列內容
-  echo "<pre>";
-  print_r($mon);
-  echo "</pre>";
+  // echo "<pre>";
+  // print_r($mon);
+  // echo "</pre>";
   ?>
+ 
   <?php
-
-
-
-  ?>
+  // 寫出每個月的陣列
+$today = date("Y-m-d");
+$year = date("Y");
+$mon = date("m");
+$firstDay = strtotime(date("$year-$mon-1"));
+$firstWeekStartDay = date("w", $firstDay);
+$days = date("t", $firstDay);
+$month = [];
+for($i=1 ; $i <= 42 ; $i++){
+if ($i <= $firstWeekStartDay) {
+$month[] = 'QAQ';
+} elseif (($i - $firstWeekStartDay) <= $days) {
+$month[] = ($i - $firstWeekStartDay);
+} else {
+$month[] = 'OAO';
+}
+}
+?>
   <div class="nav">
-    <div class="switch_lastmon"></div>
-    <div class="premon"></div>
+    <div class="switch_lastmon">
+      <a href="">
+      <?php 
+      $mon=$mon-1; 
+      ?>
+      上一個月
+      </a>
+
+    </div>
+    <div class="premon"><?= date("F",$firstDay); ?></div>
     <div class="switch_nextmon"></div>
   </div>
   <?php
@@ -57,31 +76,12 @@
         <div class="week"><?= $w; ?> </div>
       <?php endforeach; ?>
 
-
-      <?php for ($i = 1; $i <= 42; $i++) : ?>
+      <?php foreach ($month as $m) : ?>
         <div class="date">
-          <?php
-          $today = date("Y-m-d");
-          // echo $today;
-          $year = date("Y");
-          $mon = date("m");
-          $firstDay = strtotime(date("$year-$mon-1"));
-          $firstWeekStartDay = date("w", $firstDay);
-          // echo $firstDay."周" . $firstWeekStartDay;
-          $days = date("t", $firstDay);
-          $month = [];
-
-          if ($i <= $firstWeekStartDay) {
-            $month[] = 'QAQ';
-          } elseif (($i - $firstWeekStartDay) <= $days) {
-            $month[] = ($i - $firstWeekStartDay);
-          } else {
-            $month[] = 'OAO';
-          }
-          ?>
-          <?php= $month[]; ?>
+          
+          <?= $m; ?>
         </div>
-      <?php endfor; ?>
+      <?php endforeach; ?>
     </div>
 </body>
 
