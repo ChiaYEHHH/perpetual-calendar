@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* 讓背景填滿整個畫面 */
+    animation: gradientAnimation 10s infinite;
+    /* 使用名為 gradientAnimation 的動畫，持續 10 秒，無限循環 */
+    background: linear-gradient(to right, #ff5733, #ffbd69, #ffeea8);
+    /* 初始漸層背景 */
+    background-size: 200% auto;
+    /* 設定漸層大小為原來的兩倍寬 */
+}
+
+.bgc_gradient {
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
+      animation: gradientAnimation 10s ease infinite alternate; */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+.calendar {
+    background-color: lightblue;
+    width: 60%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+.date {
+    border: 5px double black;
+    width: 12%;
+    height: 8%;
+    margin: auto;
+}
+
+.week {
+    border: 5px double black;
+    width: 12%;
+    height: 8%;
+
+    text-align: center;
+
+}
+
+h1 {
+    color: #ffbd69;
+}
