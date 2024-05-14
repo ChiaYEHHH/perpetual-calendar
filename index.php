@@ -13,44 +13,41 @@
 </head>
 
 <body>
-  <h1>萬年曆</h1>
-  <?php
-  $w = 5; // 每次增加的 '0' 數量
-  $day = 30;
-  $mon = []; // 建立一個空陣列
-  for ($i = 1; $i <= 42; $i++) {
-    if ($i <= $w) {
-      $mon[] = 'QAQ';
-    } elseif (($i - $w) <= $day) {
-      $mon[] = ($i - $w);
-    } else {
-      $mon[] = 'OAO';
-    }
-  }
-
-  // 印出陣列內容
-  // echo "<pre>";
-  // print_r($mon);
-  // echo "</pre>";
-  ?>
- 
-  <?php
+  <h1>Enjoy your days</h1>
+   
+ <?php
   // 寫出每個月的陣列
-$today = date("Y-m-d");
-$year = date("Y");
-$mon = date("m");
-$firstDay = strtotime(date("$year-$mon-1"));
-$firstWeekStartDay = date("w", $firstDay);
-$days = date("t", $firstDay);
-$month = [];
-for($i=1 ; $i <= 42 ; $i++){
-if ($i <= $firstWeekStartDay) {
-$month[] = 'QAQ';
-} elseif (($i - $firstWeekStartDay) <= $days) {
-$month[] = ($i - $firstWeekStartDay);
-} else {
-$month[] = 'OAO';
+  $today = date("Y-m-d");
+  $year = date("Y");
+  $mon = date("m");
+  $firstDay = strtotime(date("$year-$mon-1"));
+  $firstWeekStartDay = date("w", $firstDay);
+  $days = date("t", $firstDay);
+  $month = [];
+  for($i=1 ; $i <= 42 ; $i++){
+    if ($i <= $firstWeekStartDay) {
+      $month[] = 'QAQ';
+    } elseif (($i - $firstWeekStartDay) <= $days) {
+      $month[] = ($i - $firstWeekStartDay);
+    } else {
+      $month[] = 'OAO';
+    }
+    // 印出陣列內容
+    // echo "<pre>";
+    // print_r($month);
+    // echo "</pre>";
 }
+if($mon+1>12){
+  $mon=1;
+  $year=$year+1;
+}else{
+  $mon=$mon+1;
+}
+if($mon-1<1){
+  $mon=12;
+  $year=$year-1;
+}else{
+  $mon=$mon-1;
 }
 ?>
   <div class="nav">

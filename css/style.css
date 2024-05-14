@@ -38,8 +38,8 @@ body {
 
 .calendar {
     background-color: lightblue;
-    width: 60%;
-    height: 50vh;
+    width: 500px;
+    height: 400px;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -53,6 +53,11 @@ body {
     width: 12%;
     height: 8%;
     margin: auto;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    /* margin: auto; */
 }
 
 .week {
