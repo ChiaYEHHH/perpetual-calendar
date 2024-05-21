@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<a href="index.php">主頁</a>
 <?php
 // $mon = isset($nextMon) ? $nextMon : date("m");
 $mon = isset($nextMon) ? $nextMon : date("m");

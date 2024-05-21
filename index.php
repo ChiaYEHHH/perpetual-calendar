@@ -18,8 +18,8 @@
   <?php
   // 寫出每個月的陣列
   $today = date("Y-m-d");
-  $year = date("Y");
-  $mon = date("m");
+  $year = $_GET['year'] ?? date("Y");
+  $mon = $_GET['mon'] ?? date("m");
   $firstDay = strtotime(date("$year-$mon-1"));
   $firstWeekStartDay = date("w", $firstDay);
   $days = date("t", $firstDay);
@@ -39,23 +39,33 @@
     // echo "</pre>";
   }
   if ($mon + 1 > 12) {
-    $mon = 1;
-    $year = $year + 1;
+    $nextMon = 1;
+    $nextYear = $year + 1;
   } else {
-    $mon = $mon + 1;
+    $nextMon = $mon + 1;
+    $nextYear = $year;
   }
   if ($mon - 1 < 1) {
-    $mon = 12;
-    $year = $year - 1;
+    $lastMon = 12;
+    $lastYear = $year - 1;
   } else {
-    $mon = $mon - 1;
+    $lastMon = $mon - 1;
+    $lastYear = $year;
   }
   ?>
 
   <div class="calendar">
 
     <div class="nav">
-
+      <div class="div">
+        <a href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">上個月</a>
+      </div>
+      <div class="div">
+        <?= $year; ?>年 <?= $mon; ?>月
+      </div>
+      <div class="div">
+        <a href="index.php?year=<?= $nextYear; ?>&mon=<?= $nextMon; ?>">下個月</a>
+      </div>
     </div>
     <!-- 月曆主體 -->
     <div class="main">
