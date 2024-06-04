@@ -15,6 +15,7 @@
 <body>
   <h1>Enjoy your days</h1>
   <a href="test.php">測試頁</a>
+  <a href="clock.php">測試時鐘頁</a>
   <?php
   // 寫出每個月的陣列
   $today = date("Y-m-d");
