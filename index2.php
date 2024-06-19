@@ -28,19 +28,24 @@
             /* background-color: chocolate */
         }
 
-        .box_now {
+        .box_row {
             display: flex;
             flex-wrap: wrap;
+            height: 75vh;
+        }
+        .box{
+            width: 50%;
+            height: 50%;
         }
 
         .box_Mon {
-            padding-top: 50px;
+            /* padding-top: 50px; */
             transform: rotate(270deg);
-
+            /* background-color: aqua; */
         }
 
         .txt_Mon {
-            font-size: 180px;
+            /* font-size: auto; */
             font-family: "Nabla", system-ui;
             /* font-optical-sizing: auto;
             font-weight: 400;
@@ -50,31 +55,40 @@
                 "EHLT" 12; */
             /* transform: rotate(180deg); */
         }
-
-        .box {
-            width: 300px;
-            height: 400px;
-
+        
+        .box_Mon {
+            /* width: 300px;
+            height: 400px; */
+            background-color: blueviolet;
+            
         }
     </style>
 </head>
 
 <body>
     <?php
-$now_year=date('Y');
+    $now_year = date('Y');
 
     ?>
-    <div class="container bg-secondary mt-5">
-        <div class="row w-100 h-100 justify-content-center align-items-center">
-            <div class="col box_now bg-danger flex-row">
-                <div class="box box_Year"><span class="txt_Mon"><?= date('Y'); ?></span></div>
-                <div class="box box_Mon "><span class="txt_Mon"><?= date('M'); ?></span></div>
-                <div class="box box_Clock">clock</div>
-                <div class="box box_pic">
-                    <img src="./pic/car.jpeg" srcset="">
+    <div class="container bg-secondary mt-4">
+        <div class="row cent">
+            <div class="col-sm-12 col-md-6 col-lg-4  bg-danger flex-row">
+                <div class="box_title w-100">
+                    title
+                </div>
+                <div class="box_row">
+                    <div class="box box_Year"><span class="txt_Year"><?= date('Y'); ?></span></div>
+                    <div class="box box_Mon "><span class="txt_Mon bg-info"><?= date('M'); ?></span></div>
+                </div>
+                <div class="box_row">
+                    <div class="box box_Clock">clock</div>
+                    <div class="box box_pic">
+                        pic
+                        <!-- <img src="./pic/car.jpeg" srcset=""> -->
+                    </div>
                 </div>
             </div>
-            <div class=" col bg-info">
+            <div class=" col-sm-12 col-md-6 col-lg-8  bg-info">
                 <div class="calander">
                     214
                 </div>
