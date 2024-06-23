@@ -1,3 +1,8 @@
+/* * {
+    box-sizing: border-box;
+    overflow: hidden;
+} */
+
 body {
     margin: 0;
     padding: 0;
@@ -31,78 +36,53 @@ body {
     }
 }
 
-.container {
-    width: 1200px;
-    height: 800px;
-    /* background-color: aquamarine; */
-    margin: auto;
-    margin-top: 60px;
-}
-
-header {
+.container{
+    margin-top: 50px;
     width: 100%;
-    height: 100px;
-    background-color: #ffbd69;
-    font-family: "Nabla", system-ui;
-    font-size: 70px;
-}
-
-.row {
+    height: 80%;
+    background-color: #32e6dd;
+    margin: auto;
     display: flex;
-    flex-basis: 100%;
-    height: calc(100% - 100px);
-    /* background-color: blueviolet; */
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* aside {
-    background-color: chocolate;
-}
-
-main {
-    background-color: blue;
-} */
-
-.box {
-    width: 100%;
-    height: 25%;
-    /* border: 1px solid black; */
-    flex-direction: row;
-    font-family: "Nabla", system-ui;
-    font-size: 60px;
-}
-
-.box_Note {
-    height: 15%;
-    font-size: 40px;
-
-}
-
-.box_Clock {
-    height: 25%;
-}
-
-#clock_Switch {
-    width: 250px;
-    height: 50px;
-    font-size: 15px;
+.row{
+    margin-top: 50px;
+    padding: 50px;
+    height: 700px;
+    width: 1200px;
     background-color: #ff5733;
-    font-family: "Nabla", system-ui;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+
+}
+
+.calendar {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .nav {
     width: 500px;
     height: 60px;
-    /* background-color: #96c992; */
+    background-color: #96c992;
     display: flex;
     /* flex-wrap: wrap; */
     align-items: center;
     justify-content: space-between;
-    margin: auto;
 }
 
 .main {
-    /* background-color: lightblue; */
+    background-color: lightblue;
     width: 500px;
     height: 400px;
     margin: auto;
@@ -110,10 +90,12 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+
 }
 
 .date {
-    /* border: 1px double black; */
+    border: 1px double black;
     width: 70px;
     height: 55px;
     margin: auto;
@@ -130,7 +112,7 @@ main {
 }
 
 .week {
-    /* border: 1px double black; */
+    border: 1px double black;
     width: 70px;
     height: 55px;
     display: flex;
@@ -139,4 +121,8 @@ main {
 
     /* text-align: center; */
 
+}
+
+h1 {
+    color: #ffbd69;
 }

@@ -33,20 +33,16 @@
 
     <div class="clock">
         <div class="clickBtn">
-
             <button type="button" id="clock_Switch24">24時制</button>
             <button type="button" id="clock_Switch12">12時制</button>
             <button type="button" id="clock_Switch">時制</button>
         </div>
         <div class="oclock oclock12" id="oclock12">
             <?= $clock_12; ?>
-
         </div>
         <div class="oclock oclock24" id="oclock24">
             <?= $clock_24; ?>
-
         </div>
-
     </div>
 
     <script>
