@@ -40,13 +40,13 @@ include_once "api.php";
             <main class="col-8">
                 <div class="nav">
                     <div class="div">
-                        <a href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">上個月</a>
+                        <a class="btn btn-info" href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">上個月</a>
                     </div>
                     <div class="div">
                         <?= $year; ?>年 <?= $mon; ?>月
                     </div>
                     <div class="div">
-                        <a href="index.php?year=<?= $nextYear; ?>&mon=<?= $nextMon; ?>">下個月</a>
+                        <a class="btn btn-info" href="index.php?year=<?= $nextYear; ?>&mon=<?= $nextMon; ?>">下個月</a>
                     </div>
                 </div>
                 <!-- 月曆主體 -->

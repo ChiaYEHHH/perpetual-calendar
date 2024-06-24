@@ -11,7 +11,7 @@
     $firstDay = strtotime(date("$year-$mon-1"));
     $firstWeekStartDay = date("w", $firstDay);
     $days = date("t", $firstDay);
-    $week = ['日', '一', '二', '三', '四', '五', '六'];
+    $week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     $month = [];
     for ($i = 1; $i <= 42; $i++) {
         if ($i <= $firstWeekStartDay) {
