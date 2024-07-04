@@ -25,7 +25,7 @@ include_once "api.php";
         <div class="row">
             <aside class="col-4">
                 <div class="box box_Year"><?= $year; ?></div>
-                <div class="box box_Mon"><?= date('M j'); ?></div>
+                <div class="box box_Mon"><a href="index.php"><?= date('M j'); ?></a></div>
                 <div class="box box_Note">note</div>
                 <div class="box box_Clock">
                     <div class="oclock oclock12" id="oclock12">
@@ -39,25 +39,24 @@ include_once "api.php";
             </aside>
             <main class="col-8">
                 <div class="nav">
-                    <div class="div">
-                        <a class="btn btn-info" href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">上個月</a>
+                    <div>
+                        <a class="btn btn-md" id="btn_M" href="index.php?year=<?= $lastYear; ?>&mon=<?= $lastMon; ?>">Last Month</a>
                     </div>
-                    <div class="div">
-                        <?= $year; ?>年 <?= $mon; ?>月
+                    <div class="mon">
+                        <?= $year; ?>. <?= $mon; ?>
                     </div>
-                    <div class="div">
-                        <a class="btn btn-info" href="index.php?year=<?= $nextYear; ?>&mon=<?= $nextMon; ?>">下個月</a>
+                    <div>
+                        <a class="btn btn-md" id="btn_M" href="index.php?year=<?= $nextYear; ?>&mon=<?= $nextMon; ?>">Next Month</a>
                     </div>
                 </div>
                 <!-- 月曆主體 -->
                 <div class="main">
                     <?php
                     foreach ($week as $w) : ?>
-                        <div class="week"><?= $w; ?> </div>
+                        <div class="week mb-3"><?= $w; ?> </div>
                     <?php endforeach; ?>
                     <?php foreach ($month as $m) : ?>
                         <div class="date">
-
                             <?= $m; ?>
                         </div>
                     <?php endforeach; ?>
@@ -91,5 +90,4 @@ include_once "api.php";
             }
         })
     })
-</script>
 </script>
